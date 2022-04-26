@@ -1,0 +1,164 @@
+*,
+::before,
+::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background: linear-gradient(to right, rgba(0, 0, 0, .5), rgba(255, 255, 255, .5));
+}
+
+.task_container {
+    max-width: 600px;
+    width: 80%;
+    margin: 30px auto;
+}
+
+.control_input {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.control_input input {
+    width: calc(100% - 15px);
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 50px;
+}
+
+.control_input input.hidden {
+    pointer-events: none;
+}
+
+.control_input span {
+    position: absolute;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #f50;
+    text-align: center;
+    line-height: 35px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.3s linear;
+}
+
+.control_input span:hover {
+    transform: rotate(90deg);
+}
+
+.task_box {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.task_box.finished {
+    text-decoration: line-through;
+}
+
+.task_box > span {
+    display: block;
+    padding: 10px;
+    background-color: #f6f6f6;
+    border-radius: 5px;
+}
+
+.task_box > span:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.task_msg {
+    padding: 10px;
+}
+
+.task {
+    overflow: hidden;
+}
+
+.task.finished {
+    text-decoration: line-through;
+}
+
+
+
+.task > span {
+    float: right;
+    background-color: #f50;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.task_stat {
+    padding: 10px;
+    background-color: #f6f6f6;
+    margin: 0 10px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.task_stat .task_count {
+    float: left;
+}
+
+.task_stat .task_completed {
+    float: right;
+}
+
+.task_stat .task_count span,
+.task_stat .task_completed span {
+    color: #fff;
+    padding: 2px 4px;
+    border-radius: 5px;
+}
+
+
+.task_stat .task_completed span {
+    background-color: red;
+}
+
+.task_stat .task_count span {
+    background-color: blue;
+}
+
+.control {
+    margin: 10px;
+    background-color: #f6f6f6;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+}
+
+.control .delete_all,
+.control .finished {
+    width: fit-content;
+    padding: 5px 10px;
+    background-color: #f50;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
